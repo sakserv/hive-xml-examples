@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Source the config
+. /tmp/hive-xml-examples/conf/env.cfg
+
 echo -e "\n###  Creating table $HIVE_XML_SERDE_TABLE_NAME"
 hive -e "DROP TABLE IF EXISTS $HIVE_XML_SERDE_TABLE_NAME;"
 hive -hiveconf TABLE_NAME=$HIVE_XML_SERDE_TABLE_NAME \
