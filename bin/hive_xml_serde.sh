@@ -1,9 +1,7 @@
 #!/bin/bash
 
-HIVE_XML_SERDE_TABLE_NAME
-
-echo -e "\n###  Creating table $HIVE_XPATH_TABLE_NAME"
-hive -e "DROP TABLE IF EXISTS $HIVE_XPATH_TABLE_NAME;"
+echo -e "\n###  Creating table $HIVE_XML_SERDE_TABLE_NAME"
+hive -e "DROP TABLE IF EXISTS $HIVE_XML_SERDE_TABLE_NAME;"
 hive -hiveconf TABLE_NAME=$HIVE_XML_SERDE_TABLE_NAME \
      -hiveconf TABLE_LOC=$HDFS_BASE_DIR \
      -auxpath $XML_SERDE_JAR \
