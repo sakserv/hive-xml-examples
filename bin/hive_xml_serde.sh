@@ -12,4 +12,4 @@ hive --auxpath $XML_SERDE_JAR \
 
 
 echo -e "\n###  Querying $HIVE_XML_SERDE_TABLE_NAME for id and price"
-hive --auxpath $XML_SERDE_JAR -e "select id,price from $HIVE_XML_SERDE_TABLE_NAME;"
+hive --auxpath $XML_SERDE_JAR -e "select id,price,publish_date from $HIVE_XML_SERDE_TABLE_NAME;"
