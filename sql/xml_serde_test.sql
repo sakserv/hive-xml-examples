@@ -9,8 +9,8 @@ WITH SERDEPROPERTIES (
 STORED AS
 INPUTFORMAT 'com.ibm.spss.hive.serde2.xml.XmlInputFormat'
 OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.IgnoreKeyTextOutputFormat'
+LOCATION '${hiveconf:TABLE_LOC}'
 TBLPROPERTIES (
 "xmlinput.start"="<book id",
 "xmlinput.end"="</book>"
 );
-LOCATION '${hiveconf:TABLE_LOC}'
