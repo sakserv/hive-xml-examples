@@ -12,5 +12,5 @@ hdfs dfs -mkdir $HDFS_BASE_DIR
 
 # Ingest the data
 echo -e "\n### Ingesting the sample data"
-hdfs dfs -put $SAMPLE_DATA_DIR/auctions.xml $HDFS_BASE_DIR
+#hdfs dfs -put $SAMPLE_DATA_DIR/auctions.xml $HDFS_BASE_DIR
 hdfs dfs -put $SAMPLE_DATA_DIR/books.xml $HDFS_BASE_DIR
