@@ -9,4 +9,4 @@ hive -e "CREATE EXTERNAL TABLE $HIVE_XPATH_TABLE_NAME (xmldoc STRING) LOCATION '
 
 
 echo -e "\n###  Querying $HIVE_XPATH_TABLE_NAME for xpath /catalog/book/author/text()"
-hive -e "select explode(xpath(xmldoc, '/catalog/book/author/text()')) FROM hive_xpath_test;"
+hive -e "select explode(xpath(xmldoc, '/catalog/book/author/text()')) FROM $HIVE_XPATH_TABLE_NAME;"
