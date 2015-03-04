@@ -4,7 +4,7 @@
 
 # Create the base dir in HDFS
 echo -e "\n###  Creating $HDFS_BASE_DIR in HDFS"
-if hdfs dfs -test $HDFS_BASE_DIR; then
+if hdfs dfs -test -d $HDFS_BASE_DIR; then
   hdfs dfs -rm -r $HDFS_BASE_DIR
 fi
 hdfs dfs -mkdir $HDFS_BASE_DIR
