@@ -14,3 +14,5 @@ cd /tmp && git clone https://github.com/sakserv/hive-xml-examples.git
 ```
 cd /tmp/hive-xml-examples && bash -x bin/ingest_data.sh
 ```
+
+
