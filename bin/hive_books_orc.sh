@@ -12,7 +12,6 @@ hive --auxpath $XML_SERDE_JAR \
      
      
 echo -e "\n###  Populate the table from $HIVE_BOOKS_ORC_TABLE_NAME"
-hive --auxpath $XML_SERDE_JAR \
-     -hiveconf TABLE_NAME=$HIVE_BOOKS_ORC_TABLE_NAME \
+hive -hiveconf TABLE_NAME=$HIVE_BOOKS_ORC_TABLE_NAME \
      -hiveconf SOURCE_TABLE_NAME=$HIVE_XML_SERDE_TABLE_NAME \
      -f $SQL_BASE_DIR/books_orc_insert_into.sql || exit 1
