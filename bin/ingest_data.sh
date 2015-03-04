@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Source the config
 . /tmp/hive-xml-examples/conf/env.cfg
 
 # Create the base dir in HDFS
