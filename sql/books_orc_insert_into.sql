@@ -4,4 +4,4 @@ set hive.exec.dynamic.partition=true;
 set hive.exec.dynamic.partition.mode=nonstrict;
 
 INSERT INTO TABLE ${hiveconf:TABLE_NAME} PARTITION(publish_date)
-SELECT id,author,title,price FROM ${hiveconf:SOURCE_TABLE_NAME};
+SELECT id,author,title,price,publish_date FROM ${hiveconf:SOURCE_TABLE_NAME};
